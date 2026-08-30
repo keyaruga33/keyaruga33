@@ -1,0 +1,100 @@
+<svg width="100%" height="260" viewBox="0 0 1000 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hdrGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D9CB"/>
+      <stop offset="50%" stop-color="#109EE6"/>
+      <stop offset="100%" stop-color="#BD49FF"/>
+    </linearGradient>
+    <radialGradient id="hdrGlow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#00D9CB" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#00D9CB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="hdrGrid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#1E3448" stroke-width="1" opacity="0.35"/>
+    </pattern>
+    <filter id="hdrBlur"><feGaussianBlur stdDeviation="6"/></filter>
+    <clipPath id="hdrClip"><rect x="4" y="4" width="992" height="252" rx="14"/></clipPath>
+  </defs>
+
+  <style>
+    .scan { animation: hdrScan 4s linear infinite; }
+    @keyframes hdrScan { 0% { transform: translateY(-260px); } 100% { transform: translateY(260px); } }
+
+    .flicker { animation: hdrFlicker 6s steps(30) infinite; }
+    @keyframes hdrFlicker {
+      0%,100% { opacity: 0.9; } 4% { opacity: 0.3; } 6% { opacity: 0.9; }
+      42% { opacity: 0.9; } 44% { opacity: 0.35; } 46% { opacity: 0.9; }
+      70% { opacity: 0.5; } 72% { opacity: 0.9; }
+    }
+
+    .glowPulse { animation: hdrPulse 3.2s ease-in-out infinite; }
+    @keyframes hdrPulse { 0%,100% { opacity: 0.55; } 50% { opacity: 1; } }
+
+    .title-base { font: 700 62px 'Consolas','Fira Code',monospace; fill: #FFFFFF; letter-spacing: 4px; }
+    .glitch-cyan { fill: #5AFFF0; mix-blend-mode: screen; animation: gCyan 3.5s infinite; }
+    .glitch-vio  { fill: #D278FF; mix-blend-mode: screen; animation: gVio 3.5s infinite; }
+    @keyframes gCyan {
+      0%,88%,100% { transform: translate(0,0); opacity: 0; }
+      89% { transform: translate(-4px,1px); opacity: 0.85; }
+      92% { transform: translate(3px,-1px); opacity: 0.7; }
+      94% { transform: translate(0,0); opacity: 0; }
+    }
+    @keyframes gVio {
+      0%,90%,100% { transform: translate(0,0); opacity: 0; }
+      91% { transform: translate(4px,-1px); opacity: 0.8; }
+      93.5% { transform: translate(-3px,1px); opacity: 0.65; }
+      95% { transform: translate(0,0); opacity: 0; }
+    }
+
+    .type { animation: hdrType 4s steps(28,end) infinite; white-space: pre; }
+    @keyframes hdrType {
+      0% { clip-path: inset(0 100% 0 0); }
+      45% { clip-path: inset(0 0 0 0); }
+      92% { clip-path: inset(0 0 0 0); }
+      100% { clip-path: inset(0 100% 0 0); }
+    }
+    .cursor { animation: hdrCursor 0.9s steps(2) infinite; }
+    @keyframes hdrCursor { 50% { opacity: 0; } }
+
+    .dot-green { animation: hdrDot 2s ease-in-out infinite; }
+    @keyframes hdrDot { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+  </style>
+
+  <g clip-path="url(#hdrClip)">
+    <rect width="1000" height="260" fill="#040710"/>
+    <rect width="1000" height="260" fill="url(#hdrGrid)"/>
+    <ellipse cx="500" cy="120" rx="480" ry="160" fill="url(#hdrGlow)"/>
+
+    <!-- scanline -->
+    <rect class="scan" x="0" y="0" width="1000" height="70" fill="url(#hdrGrad)" opacity="0.06"/>
+
+    <!-- window chrome -->
+    <circle cx="34" cy="30" r="6" fill="#FF4757"/>
+    <circle cx="56" cy="30" r="6" fill="#FDBC4B"/>
+    <circle cx="78" cy="30" r="6" fill="#71F79F"/>
+    <text x="965" y="34" text-anchor="end" font="500 13px 'Consolas',monospace" fill="#607088">keyaruga@system:~$</text>
+    <line x1="18" y1="52" x2="982" y2="52" stroke="#1E3448" stroke-width="1"/>
+
+    <!-- title with glitch -->
+    <g transform="translate(500,150)" text-anchor="middle">
+      <text class="title-base" x="0" y="0">KEYARUGA</text>
+      <text class="glitch-cyan title-base" x="0" y="0">KEYARUGA</text>
+      <text class="glitch-vio title-base" x="0" y="0">KEYARUGA</text>
+    </g>
+
+    <!-- subtitle typed -->
+    <g transform="translate(500,190)" text-anchor="middle">
+      <text class="type" font="500 20px 'Consolas',monospace" fill="#00D9CB">&gt; Amir Hossain Abdi — Code the Future. Preserve the Past</text>
+      <rect class="cursor" x="335" y="-16" width="10" height="22" fill="#5AFFF0"/>
+    </g>
+
+    <!-- footer status -->
+    <g transform="translate(500,228)" text-anchor="middle">
+      <circle class="dot-green" cx="-92" cy="-5" r="5" fill="#71F79F"/>
+      <text font="600 13px 'Consolas',monospace" fill="#A0B4CC" letter-spacing="2">MEMORY: INTACT</text>
+    </g>
+
+    <!-- border frame -->
+    <rect class="flicker" x="6" y="6" width="988" height="248" rx="12" fill="none" stroke="#00D9CB" stroke-width="1.5"/>
+  </g>
+</svg>

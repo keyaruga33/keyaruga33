@@ -1,0 +1,228 @@
+<svg width="100%" height="576" viewBox="0 0 900 576" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D9CB"/>
+      <stop offset="60%" stop-color="#109EE6"/>
+      <stop offset="100%" stop-color="#BD49FF"/>
+    </linearGradient>
+    <filter id="barGlow" x="-30%" y="-100%" width="160%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="skClip"><rect width="900" height="576" rx="14"/></clipPath>
+  </defs>
+
+  <style>
+    text { font:500 15px 'Consolas','Fira Code',monospace; fill:#DCF0FF; }
+    .lbl { fill:#A0B4CC; }
+    .pct { fill:#5AFFF0; font-weight:700; }
+    .track { fill:#1E2436; }
+
+    @keyframes shimmer {
+      0%,100% { opacity:1; }
+      50% { opacity:0.78; }
+    }
+
+    .head { animation:headBlink 2.4s ease-in-out infinite; }
+
+    @keyframes headBlink {
+      0%,100% { opacity:1; }
+      50% { opacity:0.4; }
+    }
+
+    .flick { animation:fBorder2 6s steps(24) infinite; }
+
+    @keyframes fBorder2 {
+      0%,100% { opacity:0.8; }
+      40% { opacity:0.3; }
+      42% { opacity:0.8; }
+    }
+
+    @keyframes grow0 {
+      0%,4% { width:0; }
+      55% { width:770.80px; }
+      100% { width:770.80px; }
+    }
+    .b0 {
+      animation:
+        grow0 3.2s cubic-bezier(.2,.8,.2,1) 1 forwards,
+        shimmer 3s ease-in-out infinite 3.2s;
+    }
+
+    @keyframes grow1 {
+      0%,4% { width:0; }
+      55% { width:738.00px; }
+      100% { width:738.00px; }
+    }
+    .b1 {
+      animation:
+        grow1 3.2s cubic-bezier(.2,.8,.2,1) 1 forwards,
+        shimmer 3s ease-in-out infinite 3.2s;
+    }
+
+    @keyframes grow2 {
+      0%,4% { width:0; }
+      55% { width:697.00px; }
+      100% { width:697.00px; }
+    }
+    .b2 {
+      animation:
+        grow2 3.2s cubic-bezier(.2,.8,.2,1) 1 forwards,
+        shimmer 3s ease-in-out infinite 3.2s;
+    }
+
+    @keyframes grow3 {
+      0%,4% { width:0; }
+      55% { width:615.00px; }
+      100% { width:615.00px; }
+    }
+    .b3 {
+      animation:
+        grow3 3.2s cubic-bezier(.2,.8,.2,1) 1 forwards,
+        shimmer 3s ease-in-out infinite 3.2s;
+    }
+
+    @keyframes grow4 {
+      0%,4% { width:0; }
+      55% { width:639.60px; }
+      100% { width:639.60px; }
+    }
+    .b4 {
+      animation:
+        grow4 3.2s cubic-bezier(.2,.8,.2,1) 1 forwards,
+        shimmer 3s ease-in-out infinite 3.2s;
+    }
+
+    @keyframes grow5 {
+      0%,4% { width:0; }
+      55% { width:590.40px; }
+      100% { width:590.40px; }
+    }
+    .b5 {
+      animation:
+        grow5 3.2s cubic-bezier(.2,.8,.2,1) 1 forwards,
+        shimmer 3s ease-in-out infinite 3.2s;
+    }
+
+    @keyframes grow6 {
+      0%,4% { width:0; }
+      55% { width:574.00px; }
+      100% { width:574.00px; }
+    }
+    .b6 {
+      animation:
+        grow6 3.2s cubic-bezier(.2,.8,.2,1) 1 forwards,
+        shimmer 3s ease-in-out infinite 3.2s;
+    }
+
+    @keyframes grow7 {
+      0%,4% { width:0; }
+      55% { width:574.00px; }
+      100% { width:574.00px; }
+    }
+    .b7 {
+      animation:
+        grow7 3.2s cubic-bezier(.2,.8,.2,1) 1 forwards,
+        shimmer 3s ease-in-out infinite 3.2s;
+    }
+
+    @keyframes grow8 {
+      0%,4% { width:0; }
+      55% { width:533.00px; }
+      100% { width:533.00px; }
+    }
+    .b8 {
+      animation:
+        grow8 3.2s cubic-bezier(.2,.8,.2,1) 1 forwards,
+        shimmer 3s ease-in-out infinite 3.2s;
+    }
+
+  </style>
+
+  <g clip-path="url(#skClip)">
+    <rect width="900" height="576" fill="#0E1424"/>
+    <rect width="900" height="34" fill="#080D19"/>
+    <circle class="head" cx="20" cy="17" r="5" fill="#00D9CB"/>
+    <text x="34" y="22" class="lbl">tech_stack.log</text>
+    <line x1="0" y1="34" x2="900" y2="34" stroke="#1E3448"/>
+
+    <g transform="translate(28,70)">
+
+      <g transform="translate(0,0)">
+        <text y="0">Python Ecosystem</text>
+        <text x="820" y="0" text-anchor="end" class="pct">94%</text>
+        <rect class="track" y="14" width="820" height="10" rx="5"/>
+        <rect class="b0" y="14" width="0" height="10" rx="5"
+              fill="url(#barGrad)" filter="url(#barGlow)"/>
+      </g>
+
+      <g transform="translate(0,54)">
+        <text y="0">Backend Development</text>
+        <text x="820" y="0" text-anchor="end" class="pct">90%</text>
+        <rect class="track" y="14" width="820" height="10" rx="5"/>
+        <rect class="b1" y="14" width="0" height="10" rx="5"
+              fill="url(#barGrad)" filter="url(#barGlow)"/>
+      </g>
+
+      <g transform="translate(0,108)">
+        <text y="0">Mobile (Flutter)</text>
+        <text x="820" y="0" text-anchor="end" class="pct">85%</text>
+        <rect class="track" y="14" width="820" height="10" rx="5"/>
+        <rect class="b2" y="14" width="0" height="10" rx="5"
+              fill="url(#barGrad)" filter="url(#barGlow)"/>
+      </g>
+
+      <g transform="translate(0,162)">
+        <text y="0">Frontend Web</text>
+        <text x="820" y="0" text-anchor="end" class="pct">75%</text>
+        <rect class="track" y="14" width="820" height="10" rx="5"/>
+        <rect class="b3" y="14" width="0" height="10" rx="5"
+              fill="url(#barGrad)" filter="url(#barGlow)"/>
+      </g>
+
+      <g transform="translate(0,216)">
+        <text y="0">Databases</text>
+        <text x="820" y="0" text-anchor="end" class="pct">78%</text>
+        <rect class="track" y="14" width="820" height="10" rx="5"/>
+        <rect class="b4" y="14" width="0" height="10" rx="5"
+              fill="url(#barGrad)" filter="url(#barGlow)"/>
+      </g>
+
+      <g transform="translate(0,270)">
+        <text y="0">Desktop (Qt/QML)</text>
+        <text x="820" y="0" text-anchor="end" class="pct">72%</text>
+        <rect class="track" y="14" width="820" height="10" rx="5"/>
+        <rect class="b5" y="14" width="0" height="10" rx="5"
+              fill="url(#barGrad)" filter="url(#barGlow)"/>
+      </g>
+
+      <g transform="translate(0,324)">
+        <text y="0">Linux &amp; DevOps</text>
+        <text x="820" y="0" text-anchor="end" class="pct">70%</text>
+        <rect class="track" y="14" width="820" height="10" rx="5"/>
+        <rect class="b6" y="14" width="0" height="10" rx="5"
+              fill="url(#barGrad)" filter="url(#barGlow)"/>
+      </g>
+
+      <g transform="translate(0,378)">
+        <text y="0">DevOps &amp; Infrastructure</text>
+        <text x="820" y="0" text-anchor="end" class="pct">70%</text>
+        <rect class="track" y="14" width="820" height="10" rx="5"/>
+        <rect class="b7" y="14" width="0" height="10" rx="5"
+              fill="url(#barGrad)" filter="url(#barGlow)"/>
+      </g>
+
+      <g transform="translate(0,432)">
+        <text y="0">Go</text>
+        <text x="820" y="0" text-anchor="end" class="pct">65%</text>
+        <rect class="track" y="14" width="820" height="10" rx="5"/>
+        <rect class="b8" y="14" width="0" height="10" rx="5"
+              fill="url(#barGrad)" filter="url(#barGlow)"/>
+      </g>
+
+    </g>
+
+    <rect class="flick" x="1" y="1" width="898" height="574"
+          rx="13" fill="none" stroke="#BD49FF" stroke-width="1.5"/>
+  </g>
+</svg>

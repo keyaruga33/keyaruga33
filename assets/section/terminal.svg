@@ -1,0 +1,173 @@
+<svg width="100%" height="320" viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="termGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D9CB"/>
+      <stop offset="100%" stop-color="#BD49FF"/>
+    </linearGradient>
+    <clipPath id="termClip"><rect x="0" y="0" width="900" height="320" rx="14"/></clipPath>
+    <clipPath id="bodyClip"><rect x="0" y="0" width="900" height="286"/></clipPath>
+  </defs>
+
+  <style>
+    @keyframes r0a { 0%{clip-path:inset(0 100% 0 0);} 6%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+    @keyframes r0b { 0%,9%{clip-path:inset(0 100% 0 0);} 12%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+
+    @keyframes r1a { 0%,8%{clip-path:inset(0 100% 0 0);} 14%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+    @keyframes r1b { 0%,17%{clip-path:inset(0 100% 0 0);} 20%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+
+    @keyframes r2a { 0%,16%{clip-path:inset(0 100% 0 0);} 22%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+    @keyframes r2b { 0%,25%{clip-path:inset(0 100% 0 0);} 28%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+
+    @keyframes r3a { 0%,24%{clip-path:inset(0 100% 0 0);} 30%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+    @keyframes r3b { 0%,33%{clip-path:inset(0 100% 0 0);} 36%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+
+    @keyframes r4a { 0%,32%{clip-path:inset(0 100% 0 0);} 38%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+    @keyframes r4b { 0%,41%{clip-path:inset(0 100% 0 0);} 44%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+
+    @keyframes r5a { 0%,40%{clip-path:inset(0 100% 0 0);} 46%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+    @keyframes r5b { 0%,49%{clip-path:inset(0 100% 0 0);} 52%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+
+    @keyframes r6a { 0%,48%{clip-path:inset(0 100% 0 0);} 54%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+    @keyframes r6b { 0%,57%{clip-path:inset(0 100% 0 0);} 60%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+
+    @keyframes r7a { 0%,56%{clip-path:inset(0 100% 0 0);} 62%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+    @keyframes r7b { 0%,65%{clip-path:inset(0 100% 0 0);} 68%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+
+    @keyframes r8a { 0%,64%{clip-path:inset(0 100% 0 0);} 70%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+    @keyframes r8b { 0%,73%{clip-path:inset(0 100% 0 0);} 76%{clip-path:inset(0 0 0 0);} 78%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+
+    @keyframes r9a { 0%,72%{clip-path:inset(0 100% 0 0);} 78%{clip-path:inset(0 0 0 0);} 90%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+    @keyframes r9b { 0%,80%{clip-path:inset(0 100% 0 0);} 83%{clip-path:inset(0 0 0 0);} 90%{clip-path:inset(0 0 0 0);} 93%{clip-path:inset(0 100% 0 0);} 100%{clip-path:inset(0 100% 0 0);} }
+
+    .l0a{animation:r0a 35s linear infinite;} .l0b{animation:r0b 35s linear infinite;}
+    .l1a{animation:r1a 35s linear infinite;} .l1b{animation:r1b 35s linear infinite;}
+    .l2a{animation:r2a 35s linear infinite;} .l2b{animation:r2b 35s linear infinite;}
+    .l3a{animation:r3a 35s linear infinite;} .l3b{animation:r3b 35s linear infinite;}
+    .l4a{animation:r4a 35s linear infinite;} .l4b{animation:r4b 35s linear infinite;}
+    .l5a{animation:r5a 35s linear infinite;} .l5b{animation:r5b 35s linear infinite;}
+    .l6a{animation:r6a 35s linear infinite;} .l6b{animation:r6b 35s linear infinite;}
+    .l7a{animation:r7a 35s linear infinite;} .l7b{animation:r7b 35s linear infinite;}
+    .l8a{animation:r8a 35s linear infinite;} .l8b{animation:r8b 35s linear infinite;}
+    .l9a{animation:r9a 35s linear infinite;} .l9b{animation:r9b 35s linear infinite;}
+
+
+    text { font: 500 17px 'Consolas','Fira Code',monospace; white-space: pre; }
+    .cmd { fill: #00D9CB; }
+    .out { fill: #DCF0FF; }
+    .mut { fill: #607088; }
+    .ok  { fill: #71F79F; }
+
+    .pulseDot { animation: pDot 1.4s ease-in-out infinite; }
+    @keyframes pDot { 0%,100%{opacity:1;} 50%{opacity:0.25;} }
+
+    .caret { animation: caretBlink 0.9s steps(2) infinite; }
+    @keyframes caretBlink { 50%{opacity:0;} }
+
+    .flick { animation: fBorder 5s steps(24) infinite; }
+    @keyframes fBorder { 0%,100%{opacity:0.8;} 30%{opacity:0.3;} 32%{opacity:0.8;} 66%{opacity:0.5;} 68%{opacity:0.8;} }
+
+    .scrollBody { animation: autoScroll 35s ease-in-out infinite; }
+    @keyframes autoScroll {
+    0%   { transform: translateY(0); }
+    16%  { transform: translateY(0); }
+    22%  { transform: translateY(-18px); }
+    30%  { transform: translateY(-170px); }
+    38%  { transform: translateY(-238px); }
+    46%  { transform: translateY(-390px); }
+    54%  { transform: translateY(-542px); }
+    62%  { transform: translateY(-638px); }
+    70%  { transform: translateY(-734px); }
+    78%  { transform: translateY(-900px); }
+    90%  { transform: translateY(-900px); }
+    93%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+    }
+  </style>
+
+  <g clip-path="url(#termClip)">
+    <rect width="900" height="320" fill="#0E1424"/>
+    <rect width="900" height="34" fill="#080D19"/>
+    <circle cx="24" cy="17" r="6" fill="#FF4757"/>
+    <circle cx="46" cy="17" r="6" fill="#FDBC4B"/>
+    <circle cx="68" cy="17" r="6" fill="#71F79F"/>
+    <text x="450" y="22" text-anchor="middle" class="mut" font-size="13">zsh — keyaruga33</text>
+    <line x1="0" y1="34" x2="900" y2="34" stroke="#1E3448"/>
+
+    <g transform="translate(0,34)" clip-path="url(#bodyClip)">
+      <g class="scrollBody">
+        <g transform="translate(28,38)">
+
+          <g class="l0a"><text y="0" class="cmd">$ whoami</text></g>
+          <g class="l0b"><text y="28" class="ok">keyaruga33</text></g>
+
+          <g class="l1a"><text y="68" class="cmd">$ identity --full</text></g>
+          <g class="l1b">
+            <text y="96" class="out">NAME   : Amir Hossain Abdi</text>
+            <text y="124" class="out">ALIAS  : Keyaruga</text>
+            <text y="152" class="out">ROLE   : Software Engineer</text>
+            <text y="180" class="out">ORIGIN : Persia</text>
+            <text y="208" class="out">SYSTEM : Linux</text>
+          </g>
+
+          <g class="l2a"><text y="248" class="cmd">$ history --languages</text></g>
+          <g class="l2b"><text y="276" class="out">HTML · CSS · JS · Python · Java · TypeScript · Go · C++ · Dart</text></g>
+
+          <g class="l3a"><text y="316" class="cmd">$ history --frameworks</text></g>
+          <g class="l3b">
+            <text y="344" class="out">Python      :: Django · Flask · FastAPI</text>
+            <text y="372" class="out">JavaScript  :: React · Vue</text>
+            <text y="400" class="out">C++         :: Qt · QtQuick</text>
+            <text y="428" class="out">Mobile      :: Flutter · React Native</text>
+          </g>
+
+          <g class="l4a"><text y="468" class="cmd">$ find ~/projects -type f | wc -l</text></g>
+          <g class="l4b"><text y="496" class="ok">...more than I can remember</text></g>
+
+          <g class="l5a"><text y="536" class="cmd">$ plasma --why-not-gnome</text></g>
+          <g class="l5b">
+            <text y="564" class="out">REASON    : KDE</text>
+            <text y="592" class="out">SECONDARY : I LIKE MY DESKTOP</text>
+            <text y="620" class="out">GNOME     : 0%</text>
+            <text y="648" class="ok">VERDICT   : CASE CLOSED</text>
+          </g>
+
+          <g class="l6a"><text y="688" class="cmd">$ optimize --microseconds 3</text></g>
+          <g class="l6b">
+            <text y="716" class="out">GAIN      : 0.000003s</text>
+            <text y="744" class="out">FILES     : 1,284</text>
+            <text y="772" class="out">ARCH      : COMPLETELY REWRITTEN</text>
+            <text y="800" class="ok">WORTH IT  : YES</text>
+          </g>
+
+          <g class="l7a"><text y="840" class="cmd">$ timeline --current</text></g>
+          <g class="l7b">
+            <text y="868" class="out">BACKEND · FRONTEND · DESKTOP · MOBILE · SYSTEMS</text>
+            <text y="896" class="ok">ALL SYSTEMS ACTIVE</text>
+          </g>
+
+          <g class="l8a"><text y="936" class="cmd">$ cat /etc/motd</text></g>
+          <g class="l8b">
+            <text y="964" class="out">I never chose one road.</text>
+            <text y="992" class="out">I just refused to stop walking.</text>
+          </g>
+
+          <g class="l9a"><text y="1032" class="cmd">$ systemctl status consciousness.service</text></g>
+          <g class="l9b">
+            <circle class="pulseDot" cx="4" cy="1058" r="5" fill="#71F79F"/>
+            <text x="16" y="1063" class="ok">active (running) — MEMORY INTACT</text>
+            <text y="1090" class="out">DIRECTIVE : CREATE</text>
+            <text y="1118" class="ok">TIMELINE RESUMED</text>
+
+            <g transform="translate(0,1158)">
+              <text class="cmd">$ </text>
+              <rect class="caret" x="16" y="-15" width="9" height="18" fill="#5AFFF0"/>
+            </g>
+          </g>
+
+        </g>
+      </g>
+    </g>
+
+    <rect class="flick" x="1" y="1" width="898" height="318" rx="13" fill="none" stroke="url(#termGrad)" stroke-width="1.5"/>
+  </g>
+</svg>

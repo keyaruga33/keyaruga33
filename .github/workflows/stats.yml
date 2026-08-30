@@ -1,0 +1,48 @@
+name: Update Stats
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "tools/generate_stats.py"
+      - ".github/workflows/stats.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-stats
+  cancel-in-progress: true
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate stats card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATS_USERNAME: keyaruga33
+        run: python tools/generate_stats.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- assets/section/stats.svg; then
+            echo "No changes to commit."
+          else
+            git add assets/section/stats.svg
+            git commit -m "chore(stats): refresh account statistics [skip ci]"
+            git push
+          fi

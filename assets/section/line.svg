@@ -1,0 +1,31 @@
+<svg width="1200" height="2" viewBox="0 0 1200 2" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="divider" x1="0" y1="0" x2="1200" y2="0">
+      <stop offset="0%" stop-color="#00D9CB"/>
+      <stop offset="50%" stop-color="#109EE6"/>
+      <stop offset="100%" stop-color="#BD49FF"/>
+    </linearGradient>
+
+    <filter id="glow" x="-10%" y="-500%" width="120%" height="1100%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+    </filter>
+  </defs>
+  <line
+    x1="0"
+    y1="1"
+    x2="1200"
+    y2="1"
+    stroke="url(#divider)"
+    stroke-width="2"
+    opacity="0.22"
+    filter="url(#glow)"
+  />
+  <line
+    x1="0"
+    y1="1"
+    x2="1200"
+    y2="1"
+    stroke="url(#divider)"
+    stroke-width="1"
+  />
+</svg>
