@@ -11,7 +11,7 @@
   <style>
     .core { animation: divPulse 2.6s ease-in-out infinite; }
     @keyframes divPulse { 0%,100%{opacity:0.6;} 50%{opacity:1;} }
-    .sweep { animation: divSweep 3s ease-in-out infinite; }
+    .sweep { animation: divSweep 6s ease-in-out infinite; }
     @keyframes divSweep {
     0%   { transform: translateX(-260px); }
     50%  { transform: translateX(260px); }
